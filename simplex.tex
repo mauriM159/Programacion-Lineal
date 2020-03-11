@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+\title{Método Simplex}
+\author{Mauritania Meneses}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+\label{sec:introduccion}
+
+El método simplex es un algoritmo para resolver
+problemas de progamación lineal.Fue inventado por George Dantzing en
+el año 1947
+\section{Ejemplo}
+
+\label{sec:ejemplo}
+Mostremos la aplicacion del método simplex
+\begin{equation*}
+  \begin{aligned}
+    \text{Maximizar} \quad & 2x1+x2\\
+    
+    \text{sujeto a}\quad &
+    
+    \quad & \begin{aligned}
+     x1+x2 & \geq 1\\  
+     3x1+4x2 &\leq 12\\
+     x1-x2 &\leq 2\\
+     -2x1+x2&\leq 2\\
+      
+      x1,x2 &\geq 0
+    \end{aligned}
+  \end{aligned}
+\end{equation*}
+Para obtener la forma simplex añadimos una variable
+
+\begin{equation*}
+  \begin{aligned}
+    \text{Maximizar} \quad & 2x1+x2\\
+    
+    \text{sujeto a}\quad &
+    
+    \quad & \begin{aligned}
+     x1+x2+x3 & \geq 1\\  
+     3x1+4x2+x4 &\leq 12\\
+     x1-x2+x5 &\leq 2\\
+     -2x1+x2+x6&\leq 2\\
+     x1,x2,x2,x3,x4,x5,x6 &\geq 0
+    \end{aligned}
+  \end{aligned}
+\end{equation*}
+
+a continuacion obtenemos un \emph{tablero simplex} despejando las
+variables de holgura
+\begin{equation*}
+  \begin{aligned}
+    \text{Maximizar} \quad & 2x1+x2\\
+    
+    \text{sujeto a}\quad &
+    
+    \quad & \begin{aligned}
+    x3&=- x1-x2 \\  
+    x4&= 3x1+4x2 \\
+    x5&=- x1+x2 \\
+    x6&=2x1-x2\\
+     x1,x2,x2,x3,x4,x5,x6 &\geq 0
+
+     \hline
+     z&=
+   \end{aligned}
+  \end{aligned}
+\end{equation*}
+
+\end{document}
